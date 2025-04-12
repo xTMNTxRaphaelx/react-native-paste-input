@@ -21,16 +21,16 @@ class PasteInputEditText(context: ThemedReactContext) : ReactEditText(context) {
 
   interface SelectionWatcher {
     fun onSelectionChanged(selStart: Int, selEnd: Int)
-}
+  }
 
-fun setSelectionWatcher(selectionWatcher: SelectionWatcher?) {
-    mSelectionWatcher = selectionWatcher
-}
+  fun setSelectionWatcher(selectionWatcher: SelectionWatcher?) {
+      mSelectionWatcher = selectionWatcher
+  }
 
-override fun onSelectionChanged(selStart: Int, selEnd: Int) {
-    super.onSelectionChanged(selStart, selEnd)
-    mSelectionWatcher?.onSelectionChanged(selStart, selEnd)
-}
+  override fun onSelectionChanged(selStart: Int, selEnd: Int) {
+      super.onSelectionChanged(selStart, selEnd)
+      mSelectionWatcher?.onSelectionChanged(selStart, selEnd)
+  }
 
   fun setDisableCopyPaste(disabled: Boolean) {
     this.mDisabledCopyPaste = disabled

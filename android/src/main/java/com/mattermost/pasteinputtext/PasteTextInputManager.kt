@@ -62,7 +62,7 @@ class PasteTextInputManager(context: ReactApplicationContext) : ReactTextInputMa
               )
           )
       }
-  })
+    })
 
     pasteInputEditText.setOnPasteListener(PasteInputListener(pasteInputEditText, reactContext.surfaceId), eventDispatcher)
   }
